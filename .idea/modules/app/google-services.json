@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "593086029380",
+    "firebase_url": "https://videoappclone.firebaseio.com",
+    "project_id": "videoappclone",
+    "storage_bucket": "videoappclone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593086029380:android:60b5537fe35273983c6611",
+        "android_client_info": {
+          "package_name": "com.trulyfuture.videoappclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593086029380-n48durpsbjvuhqjrn374v4uq7h6s01bd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trulyfuture.videoappclone",
+            "certificate_hash": "ed8c61aab18f26a8cefcb205d98c1e6dfaf6fad1"
+          }
+        },
+        {
+          "client_id": "593086029380-bddkrtd8sr0v03v5mfjf3kbp2smdii0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPiOkYVU-B63OCZCsVBazx0vmiOlHO1IQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593086029380-bddkrtd8sr0v03v5mfjf3kbp2smdii0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
