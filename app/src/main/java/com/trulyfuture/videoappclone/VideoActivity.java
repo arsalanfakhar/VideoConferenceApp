@@ -33,7 +33,7 @@ import org.json.JSONException;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
-public class VideoActivity extends AppCompatActivity implements Session.SessionListener, PublisherKit.PublisherListener {
+public class VideoActivity extends AppCompatActivity implements Session.SessionListener{
     private static String API_KEY = "";
     private static String SESSION_ID = "";
     private static String TOKEN = "";
@@ -165,15 +165,15 @@ public class VideoActivity extends AppCompatActivity implements Session.SessionL
     @Override
     public void onConnected(Session session) {
 
-        mPublisher = new Publisher.Builder(this).build();
-        mPublisher.setPublisherListener(this);
-        binding.publisherContainer.addView(mPublisher.getView());
-
-
-        if (mPublisher.getView() instanceof GLSurfaceView){
-            ((GLSurfaceView) mPublisher.getView()).setZOrderOnTop(true);
-        }
-        mSession.publish(mPublisher);
+//        mPublisher = new Publisher.Builder(this).build();
+//        mPublisher.setPublisherListener(this);
+//        binding.publisherContainer.addView(mPublisher.getView());
+//
+//
+//        if (mPublisher.getView() instanceof GLSurfaceView){
+//            ((GLSurfaceView) mPublisher.getView()).setZOrderOnTop(true);
+//        }
+//        mSession.publish(mPublisher);
 
     }
 
@@ -213,25 +213,25 @@ public class VideoActivity extends AppCompatActivity implements Session.SessionL
     }
 
     //Publisher listener methods
-    @Override
-    public void onStreamCreated(PublisherKit publisherKit, Stream stream) {
-        Log.i(TAG, "Publisher onStreamCreated");
-        mVideoSession.setStream(stream.getCreationTime());
-        reff.child(String.valueOf(maxClients+1)).setValue(mVideoSession);
-
-    }
-
-    @Override
-    public void onStreamDestroyed(PublisherKit publisherKit, Stream stream) {
-        Log.i(TAG, "Publisher onStreamDestroyed");
-        mSession.unpublish(mPublisher);
-
-        Intent intent = new Intent(VideoActivity.this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    @Override
-    public void onError(PublisherKit publisherKit, OpentokError opentokError) {
-        Log.e(TAG, "Publisher error: " + opentokError.getMessage());
-    }
+//    @Override
+//    public void onStreamCreated(PublisherKit publisherKit, Stream stream) {
+//        Log.i(TAG, "Publisher onStreamCreated");
+//        mVideoSession.setStream(stream.getCreationTime());
+//        reff.child(String.valueOf(maxClients+1)).setValue(mVideoSession);
+//
+//    }
+//
+//    @Override
+//    public void onStreamDestroyed(PublisherKit publisherKit, Stream stream) {
+//        Log.i(TAG, "Publisher onStreamDestroyed");
+//        mSession.unpublish(mPublisher);
+//
+//        Intent intent = new Intent(VideoActivity.this, MainActivity.class);
+//        startActivity(intent);
+//    }
+//
+//    @Override
+//    public void onError(PublisherKit publisherKit, OpentokError opentokError) {
+//        Log.e(TAG, "Publisher error: " + opentokError.getMessage());
+//    }
 }
